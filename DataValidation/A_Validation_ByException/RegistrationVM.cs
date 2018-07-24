@@ -14,6 +14,9 @@ namespace A_Validation_ByException
             get { return _username; }
             set
             {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Username cannot be empty.");
+
                 OnPropertyChanged(ref _username, value);
             }
         }
