@@ -12,7 +12,9 @@
     <Grid Margin="100">
         <StackPanel>
             <Label>Username</Label>
-            <TextBox />
+            <TextBox Text="{Binding Username, ValidatesOnDataErrors=True,
+                UpdateSourceTrigger=PropertyChanged}"
+                     ToolTip="{Binding ErrorCollection[Username]}"/>
 
             <Button>Submit</Button>
         </StackPanel>
